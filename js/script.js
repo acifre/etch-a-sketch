@@ -29,4 +29,12 @@ function createGrid(numberRowCol) {
 
 }
 
+const clearBtn = document.createElement('.clear');
+
+clearBtn.addEventListener('click', () => {
+
+    // for (i =)
+    createGrid(8);
+});
+
 

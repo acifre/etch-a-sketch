@@ -5,6 +5,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -15,12 +17,12 @@ body {
 
 .container {
     max-width: 960px;
-    margin: 100px auto;
+    /* margin: auto auto; */
     padding: 10px;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); */
-    gap: 10px;
+    gap: 5px;
 }
 
 .box {
@@ -29,4 +31,8 @@ body {
     font-size: 20px;
     padding: 20px;
     border: skyblue 1px solid;
+}
+
+.clear {
+    padding: 8px;
 }
