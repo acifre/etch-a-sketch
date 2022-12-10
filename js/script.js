@@ -15,6 +15,11 @@ function pickGridSize() {
         alert("Must input numbers");
         numberRowCol = parseInt(window.prompt('Grid size?'));
     }
+
+    if (numberRowCol > 100) {
+        numberRowCol = 100;
+        alert("Max grid size is 100!");
+    }
 }
 
 
