@@ -1,9 +1,21 @@
-numberRowCol = parseInt(window.prompt('Grid Size?'));
+
 boxArray = [];
 
+pickGridSize();
 createGrid(numberRowCol);
 
 // functions
+
+function pickGridSize() {
+
+    numberRowCol = parseInt(window.prompt('Grid size?'));
+
+    while ((numberRowCol%1) != 0) 
+    {
+        alert("Must input numbers");
+        numberRowCol = parseInt(window.prompt('Grid size?'));
+    }
+}
 
 
 function createGrid(numberRowCol) {
@@ -14,7 +26,6 @@ function createGrid(numberRowCol) {
     for (let i = 1; i <= numberRowCol**2; i++) {
         boxArray[i] = document.createElement('div');
         boxArray[i].classList.add('box');
-        boxArray[i].innerHTML = i;
         container.appendChild(boxArray[i])
     }
     
@@ -23,7 +34,7 @@ function createGrid(numberRowCol) {
 for (let box of boxes) {
 
         box.addEventListener('mouseover', () => {
-            box.setAttribute('style', 'background-color: black;')
+            box.setAttribute('style', 'background-color: black; color: black;')
             // box.classList.add("color");
 
         })
@@ -46,7 +57,7 @@ clearBtn.addEventListener('click', () => {
         }
 
     boxArray = [];
-    numberRowCol = window.prompt("Grid Size?");
+    pickGridSize();
     createGrid(numberRowCol);
 });
 
