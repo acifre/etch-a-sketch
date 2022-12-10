@@ -45,6 +45,22 @@ for (let box of boxes) {
 
 
 
+// Grid size button
+
+const gridBtn = document.querySelector('.grid-size');
+gridBtn.addEventListener('click', () => {
+    const container = document.querySelector('.container');
+    
+    while (container.firstChild) {
+          container.removeChild(container.lastChild);
+        }
+
+    boxArray = [];
+    pickGridSize();
+    createGrid(numberRowCol);
+});
+
+
 
 
 // Clear button
@@ -57,7 +73,6 @@ clearBtn.addEventListener('click', () => {
         }
 
     boxArray = [];
-    pickGridSize();
     createGrid(numberRowCol);
 });
 
