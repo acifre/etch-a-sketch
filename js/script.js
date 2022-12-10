@@ -39,7 +39,7 @@ function createGrid(numberRowCol) {
 for (let box of boxes) {
 
         box.addEventListener('mouseover', () => {
-            box.setAttribute('style', 'background-color: black; color: black;')
+            box.setAttribute('style', 'background-color: #292929; color: #292929;')
             // box.classList.add("color");
 
         })
