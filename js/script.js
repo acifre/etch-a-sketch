@@ -1,4 +1,5 @@
 numberRowCol = 16;
+boxArray = []
 
 createGrid(numberRowCol);
 
@@ -9,8 +10,6 @@ function createGrid(numberRowCol) {
 
     const container = document.querySelector('.container');
     container.setAttribute('style', `grid-template-columns: repeat(${numberRowCol}, 1fr); grid-template-rows: repeat(${numberRowCol}, 1fr);`);
-
-    let boxArray = [];
 
     for (let i = 1; i <= numberRowCol**2; i++) {
         boxArray[i] = document.createElement('div');
@@ -29,11 +28,16 @@ function createGrid(numberRowCol) {
 
 }
 
-const clearBtn = document.createElement('.clear');
+const clearBtn = document.querySelector('.clear');
 
 clearBtn.addEventListener('click', () => {
+    const container = document.querySelector('.container');
+    
+    while (container.firstChild) {
+          container.removeChild(container.lastChild);
+        }
 
-    // for (i =)
+    boxArray = [];
     createGrid(8);
 });
 
