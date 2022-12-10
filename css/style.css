@@ -23,16 +23,22 @@ body {
     /* grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); */
     gap: 5px;
+    user-select: none;
 }
 
 .box {
-    background-color: steelblue;
+    background-color: white;
     color: #fff;
     font-size: 20px;
-    padding: 20px;
+    padding: auto;
     border: skyblue 1px solid;
 }
 
 .clear {
     padding: 8px;
+}
+
+.color {
+    background-color: #87ceeb;
+    padding: auto;
 }
